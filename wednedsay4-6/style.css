@@ -1,3 +1,16 @@
+body {
+    padding: 2em;
+    text-align: center;
+}
+
+#title {
+    width: 100%;    
+}
+
+#pokedex {
+    border: 5em solid red;
+    padding-bottom: 5em;
+}
 #pokemonPhoto {
-    width: 5em;
+    width: 10em;
 }

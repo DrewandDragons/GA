@@ -16,7 +16,7 @@ fetch(url)
         let pokemonHeading = document.querySelector("#pokemonName")
         let pokemonImage = document.querySelector("#pokemonPhoto")
         
-        pokemonImage.
+        pokemonImage.src = res.sprites.front_default
         pokemonHeading.innerText = `Pokemon: ${res.name.toUpperCase()}`
         console.log("success!", res);
     })
