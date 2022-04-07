@@ -1,0 +1,162 @@
+body {
+    padding: -10px;
+
+}
+
+
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.logo {
+    width: 20%;
+    margin-right: 15%;
+}
+
+
+.links {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: orange;
+    width: 10%;
+}
+
+
+.banner {
+    background-color: orange;
+    height: 500px;
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.title-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.head-copy {
+    background-color: #FFEEE1;
+    margin: 10px;
+    padding: .5em;
+}
+
+.middle-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.middle-image {
+    width: 50%;
+}
+
+.middle-copy {
+    width: 50%;
+    text-align: center;
+    display: block;
+}
+
+.badge-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FBF1DA;
+}
+
+.badge {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    background-color: orange;
+    height: 100%;
+    width: 200px;
+}
+
+.badge-upper {
+    display: block;
+    height: 100px;
+}
+
+.badge-lower {
+    height: 100px;
+    text-align: center;
+    background-color: white;
+}
+
+.lower-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5em 5em;
+    background-color: white;
+}
+
+.lower-copy {
+    margin-right: 5em;
+}
+
+.lower-form {
+    background-color: orange;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+}
+
+.form-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-inline {
+    margin: 7px;
+    margin-right: 14px;
+}
+
+.footer {
+}
+
+#lowers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#textarea-1 {
+    margin-top: 7px;
+    padding-bottom: 52%;
+}
+
+#logo1 {
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+#large-head {
+    color: red;
+    
+}
+
+#small-head {
+    color: blue;
+}

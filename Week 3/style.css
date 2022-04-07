@@ -1,0 +1,39 @@
+body {
+    background-color: grey;
+}
+.header {
+    align-items: center;
+    text-align: center;
+}
+.icon {
+    width: 20px;
+}
+.map {
+    width: 500px;
+}
+
+.foo img {
+    width: 30%;
+}
+
+
+
+#gallery {
+
+}
+
+
+
+#foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: display;
+    gap: 20%;
+
+}
+
+#drew {
+    display: flex;
+    justify-content: center;
+}

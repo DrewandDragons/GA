@@ -1,0 +1,29 @@
+body {
+    background-color: #DC6D10;
+    text-align: center;
+}
+
+.sign-in {
+    background-color: #36044C;
+}
+.player-character {
+    border: 3px solid black;
+    background-color: #DC6D10;
+}
+
+.lower-text {
+    color: white;
+}
+
+.button {
+    margin-top: 18px;
+}
+
+#log-in {
+    margin-left: 30%;
+    margin-right: 30%;
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid black;
+}
+

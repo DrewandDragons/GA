@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <form action="" id="contact-info">
+        <fieldset>
+        <legend>Contact and Character Information</legend>
+        <div>
+        <label for="username">Discord Username</label>
+            <input type="text"
+                    placeholder="Your Username"
+                    id="username">
+        <label for="password">Enter Characters Name</label>
+            <input type="password" 
+                placeholder="Your Characters Name"
+                name=""
+                id="pc-name">
+        <label for="email">Characters Class</label>
+            <input type="text" 
+                placeholder="5e Class"
+                name="" 
+                id="class">
+        <label for="email">weapons</label>
+            <input type="text" 
+                placeholder=""
+                name="" 
+                id="pc-sig">
+        </fieldset>
+        </div>
+    <fieldset>
+        <legend>Scariest "low level" monster?</legend>
+    <div>
+            <label for="scariest-monster">Favorite Low Level Monster</label>
+            <select name="scariest-monster" id="scary-monster">
+                <optgroup>
+                    <option value="">"Goblinoids"</option>
+                    <option value="">Orcs</option>
+                    <option value="">Trolls</option>
+                    <option value="">Gnolls</option>
+                    <option value="">Kobolds</option>
+                </optgroup>
+            </select>
+            <button type="submit" id="login-button">Submit</button>
+            <label for=""></label>
+    
+    </div>
+    <div> 
+    <fieldset>
+    <div>
+        <legend>Player Experience</legend>
+            <label for="player">Never Played</label>
+            <input type="radio" name="role-choice" id="player0">
+            <label for="player">Novice Player</label>
+            <input type="radio" name="role-choice" id="player1">
+            <label for="player">Knowledgable Player</label>
+            <input type="radio" name="role-choice" id="player2">
+            <label for="player">Master Tactician</label>
+            <input type="radio" name="role-choice" id="player3">
+    
+    </div>
+    <div>
+    <legend>Game Master Experience</legend>
+            <label for="gm">None</label>
+                <input type="radio" name="role-choice" id="gm-none">
+            <label for="gm">Soon!</label>
+                <input type="radio" name="role-choice" id="gm-soon">
+            <label for="gm">Sometimes</label>
+                <input type="radio" name="role-choice" id="gm-some">
+            <label for="gm">Forever</label>
+                <input type="radio" name="role-choice" id="gm-forever">
+     
+    </div>
+    </fieldset>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

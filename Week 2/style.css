@@ -1,0 +1,30 @@
+h1 {
+    color: green;
+}
+button {
+    width: 15rem;
+}
+#container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+}
+#header {
+    text-align: center;
+}
+#second-container {
+    display: flex;
+    flex-direction: row;
+}
+@media only screen and (max-width: 600px){
+    h1 {
+        color: red;
+    }
+    button {
+        background-color: black;
+    }
+    #container {
+        display: flex;
+        flex-direction: column;
+    }    
+}
