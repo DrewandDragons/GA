@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drew Eacker Final Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.dnd5eapi.co"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="canvas">
+    <div class="left-menu">
+        <a target="blank" href="https://startplaying.games/gm/drewanddragons"><img width="50%
+            " src="imgs/Drew_&_Dragons_Logo_Main.png" alt=""></a>
+        <h1>D&D 5e SRD Character Class Display Using:</h1>
+        <a href="https://www.dnd5eapi.co/docs/#get-/api/-endpoint-"><img width="50%" src="https://www.dnd5eapi.co/public/favicon.ico" alt=""></a>
+        <div class="party-select">
+        <h1>How many are in your party?</h1>
+        <button class="character-num" id="ch-one">1</button>
+        <button class="character-num" id="ch-two">2</button>
+        <button class="character-num" id="ch-three">3</button>
+        <button class="character-num" id="ch-four">4</button>
+        <button class="character-num" id="ch-five">5</button>
+        </div>
+        <div class="creater-links">
+            <h1>
+            This experience is possible thanks to these amazing artists!</h1><h2>Click their logo to check out their Patreon!</h2>
+            <a target="blank" href="https://www.patreon.com/epicisometric/posts"><img width="80%" src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/85457/1acb2e73617e4441beaad1b02ab254a4/eyJ3IjoyMDB9/21.png?token-time=2145916800&token-hash=JnHZdkDASKB1VNESZbqX7ipyazABBcD40aQZL6OTHj4%3D" alt=""></a>
+            <br>
+            <br>
+            <a target="blank" href="https://www.patreon.com/SheppiTSRodriguez/posts"><img width="80%" src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/2284088/f3624f96eb9749d8bd9ac6d2e241152c/eyJ3IjoyMDB9/2.png?token-time=2145916800&token-hash=ltbXmJBHgOK-kpRvnSUQsyRrmzVq6Tqe2htQYDVCp5k%3D" alt=""></a>
+        </div>
+    </div>
+    <div class="vtt">
+        <!-- <div class="new-char-card">
+        </div> -->
+        <!--this is the middle image based canvas section I think I should find a way to just manipulate the source of this image-->
+        <img class="game-board" id="vestibule" src="imgs/vestibule-outside.png">
+    </div>
+    <div class="right-menu"><!--this is the right bar section-->
+        <a target="blank" href="https://startplaying.games/gm/drewanddragons"><img width="50%" src="imgs/Drew_&_Dragons_Logo_Main.png" alt=""></a>
+        <h1>Click the <br> Drew & Dragons logo to check out Startplaying.games and find and open seat!</h1>
+        <h1>Check out the map pack pack creator:</h1>
+        <!--Drew and Dragons Logo, Start Playing.games logo, Epic Isomectric Logo-->
+        <a target="blank" href="https://www.patreon.com/epicisometric/posts"><img width="80%" src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/85457/1acb2e73617e4441beaad1b02ab254a4/eyJ3IjoyMDB9/21.png?token-time=2145916800&token-hash=JnHZdkDASKB1VNESZbqX7ipyazABBcD40aQZL6OTHj4%3D" alt=""></a>
+        <div class="character-names">
+            <h1>What are our heros names?</h1>
+        <fieldset class="name-fields">
+            <legend>Character Names</legend>
+            <label class="character-labels" for="character-1">Character 1</label>
+            <input id="character-1" class="character-name" placeholder="Character 1" type="text">
+
+            <label class="character-labels" for="character-2">Character 2</label>
+            <input id="character-2" class="character-name" placeholder="Character 2" type="text">
+
+            <label class="character-labels" for="character-3">Character 3</label>
+            <input id="character-3" class="character-name" placeholder="Character 3" type="text">
+
+            <label class="character-labels" for="character-4">Character 4</label>
+            <input id="character-4" class="character-name" placeholder="Character 4" type="text">
+
+            <label class="character-labels" for="character-5">Character 5</label>
+            <input id="character-5" class="character-name" placeholder="Character 5" type="text">
+        </fieldset>
+        </div>
+    </div>
+</div>
+<footer class="character-selection"> <!--15 classes including   Artificer and MCDM, footer with 15 divs-->
+        <!-- <div class="artificer classes">
+        <h1>Artificer</h1><br>
+       <button id="artificer-button" class="char-button"></button>
+       <div>
+        <h2>Hit Dice: </h2>
+        <h2>Proficiencies: </h2>
+        <h2>Saving Throws: </h2>
+        </div>
+        </div> -->
+    
+    <div class="barbarian classes">
+       <h1>Barbarian</h1>
+       <button value="barbarian" id="barbarian-button" class="char-button"></button>
+        <div class="barb-card starting-stats">
+            <h2>Hit Die</h2>
+            <h3></h3>
+            <h2>Primary Ability:</h2>
+            <h3 data-primaryAbility></h3>
+            <h2>Saving Throws:</h2>
+            <h3></h3>
+            <h2>Proficiencies:</h2>
+            <h3></h3>
+            <!-- <h3>Armor: Light armor, medium armor, shields <br>
+                Weapons: Simple weapons, martial weapons <br>
+                Tools: None 
+            </h3> -->
+        </div>
+    </div>
+    
+    <div class="bard classes">
+       <h1>Bard</h1>
+       <button value="bard" id="bard-button" class="char-button"></button>
+    <div class="bard-card starting-stats">
+        <h2>Hit Dice:</h2>
+        <h3>d8</h3>
+        <h2>Primary Ability:</h2>
+        <h3>Charisma</h3>
+        <h2>Saving Throws:</h2>
+        <h3>Dexterity, Charisma</h3>
+        <h2>Proficiencies:</h2>
+        <h3>Armor: Light armor <br>
+            Weapons: Simple weapons, hand crossbows, longswords, rapiers, shortswords <br>
+            Tools: Three musical instruments of your choice
+            </h3>
+        </div>
+    </div>
+
+    <div class="cleric classes">
+        <h1>Cleric</h1>
+        <button value="cleric" id="cleric-button" class="char-button"></button>
+        <div class="cleric-card starting-stats">
+            <h2>Hit Dice:</h2>
+            <h3>d8</h3>
+            <h2>Primary Ability:</h2>
+            <h3>Wisdom</h3>
+            <h2>Saving Throws:</h2>
+            <h3>Wisdom, Charisma</h3>
+            <h2>Proficiencies:</h2>
+            <h3>Armor: Light armor, medium armor, shields <br>
+                Weapons: Simple weapons <br>
+                Tools: None
+                </h3>
+            </div>
+    </div>
+
+    <div class="druid classes">
+        <h1>Druid</h1>
+       <button value="druid" id="druid-button" class="char-button"></button>
+       <div class="druid-card starting-stats">
+        <h2>Hit Dice:</h2>
+        <h3>d8</h3>
+        <h2>Primary Ability:</h2>
+        <h3>Wisdom</h3>
+        <h2>Saving Throws:</h2>
+        <h3>Intelligence, Wisdom</h3>
+        <h2>Proficiencies:</h2>
+        <h3>Armor: Light armor, medium armor, shields (druids will not wear armor or use shields made of metal) <br>
+            Weapons: Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears <br>
+            Tools: Herbalism kit
+            </h3>
+        </div>
+    </div>
+
+    <div class="fighter classes">
+       <h1>Fighter</h1>
+       <button value="fighter" id="fighter-button" class="char-button"></button>
+       <div class="fighter-card starting-stats">
+        <h2>Hit Dice:</h2>
+        <h3>d10</h3>
+        <h2>Primary Ability:</h2>
+        <h3>Strength or Dexterity</h3>
+        <h2>Saving Throws:</h2>
+        <h3>Strength, Constitution</h3>
+        <h2>Proficiencies:</h2>
+        <h3>Armor: All armor, shields <br>
+            Weapons: Simple weapons, martial weapons <br>
+            Tools: None
+            </h3>
+        </div>
+    </div>
+    
+    <div class="monk classes">
+        <h1>Monk</h1>
+        <button value="monk" id="monk-button" class="char-button"></button>
+        <div class="monk-card starting-stats">
+            <h2>Hit Dice:</h2>
+            <h3>d8</h3>
+            <h2>Primary Ability:</h2>
+            <h3>Dexterity and Wisdom</h3>
+            <h2>Saving Throws:</h2>
+            <h3>Strength, Dexterity</h3>
+            <h2>Proficiencies:</h2>
+            <h3>Armor: None <br>
+                Weapons: Simple weapons, shortswords <br>
+                Tools: Choose one type of artisan tools or one musical instrument
+            </h3>
+            </div>
+    </div>
+
+    <div class="paladin classes">
+        <h1>Paladin</h1>
+       <button value="paladin" id="paladin-button" class="char-button"></button>
+       <div class="paladin-card starting-stats">
+        <h2>Hit Dice:</h2>
+        <h3>d10</h3>
+        <h2>Primary Ability:</h2>
+        <h3>Strength and Charisma</h3>
+        <h2>Saving Throws:</h2>
+        <h3>Wisdom, Charisma</h3>
+        <h2>Proficiencies:</h2>
+        <h3>Armor: All armor, shields <br>
+            Weapons: Simple weapons, martial weapons <br>
+            Tools: None
+            </h3>
+        </div>
+    </div>
+    
+    <div class="ranger classes">
+       <h1>Ranger</h1>
+       <button value="ranger" id="ranger-button" class="char-button"></button>
+       <div class="ranger-card starting-stats">
+        <h2>Hit Dice:</h2>
+        <h3>d10</h3>
+        <h2>Primary Ability:</h2>
+        <h3>Dexterity and Wisdom</h3>
+        <h2>Saving Throws:</h2>
+        <h3>Strength, Dexterity</h3>
+        <h2>Proficiencies:</h2>
+        <h3>Armor: Light armor, medium armor, shields <br>
+            Weapons: Simple weapons, martial weapons <br>
+            Tools: None
+            </h3>
+        </div>
+    </div>
+    
+    <div class="rogue classes">
+            <h1>Rogue</h1>
+        <button value="rogue" id="rogue-button" class="char-button"></button>
+        <div class="rogue-card starting-stats">
+            <h2>Hit Dice:</h2>
+            <h3>d8</h3>
+            <h2>Primary Ability:</h2>
+            <h3>Dexterity</h3>
+            <h2>Saving Throws:</h2>
+            <h3>Dexterity, Intelligence</h3>
+            <h2>Proficiencies:</h2>
+            <h3>Armor: Light armor <br>
+                Weapons: Simple weapons, hand crossbows, longswords, rapiers, shortswords <br>
+                Tools: Thieves tools
+            </h3>
+            </div>
+    </div>
+
+    <div class="sorcerer classes">
+            <h1>Sorcerer</h1>
+        <button value="sorcerer" id="sorcerer-button" class="char-button"></button>
+        <div class="sorcerer-card starting-stats">
+            <h2>Hit Dice:</h2>
+            <h3>d6</h3>
+            <h2>Primary Ability:</h2>
+            <h3>Charisma</h3>
+            <h2>Saving Throws:</h2>
+            <h3>Constitution, Charisma</h3>
+            <h2>Proficiencies:</h2>
+            <h3>Armor: None <br>
+                Weapons: Daggers, darts, slings, quarterstaffs, light crossbows <br>
+                Tools: None
+                </h3>
+            </div>
+    </div>
+
+    <div class="warlock classes">
+            <h1>Warlock</h1>
+        <button value="warlock" id="warlock-button" class="char-button"></button>
+        <div class="warlock-card starting-stats">
+            <h2>Hit Dice:</h2>
+            <h3>d8</h3>
+            <h2>Primary Ability:</h2>
+            <h3>Charisma</h3>
+            <h2>Saving Throws:</h2>
+            <h3>Wisdom, Charisma</h3>
+            <h2>Proficiencies:</h2>
+            <h3>Armor: Light armor <br>
+                Weapons: Simple weapons <br>
+                Tools: None
+                </h3>
+            </div>
+    </div>
+
+    <div class="wizard classes">
+            <h1>Wizard</h1>
+        <button value="wizard" id="wizard-button" class="char-button"></button>
+        <div class="wizard-card starting-stats">
+            <h2>Hit Dice:</h2>
+            <h3>d6</h3>
+            <h2>Primary Ability:</h2>
+            <h3>Intelligence</h3>
+            <h2>Saving Throws:</h2>
+            <h3>Intelligence, Wisdom</h3>
+            <h2>Proficiencies:</h2>
+            <h3>Armor: None <br>
+                Weapons: Daggers, darts, slings, quarterstaffs, light crossbows <br>
+                Tools: None
+                </h3>
+            </div>
+    </div>
+
+    <!-- <div class="beastheart classes">
+            <h1>BeastHeart</h1>
+        <button id="beastheart-button" class="char-button"></button>
+        <div>
+            <h2>Hit Dice: </h2>
+            <h2>Proficiencies: </h2>
+            <h2>Saving Throws: </h2>
+        </div>
+        </div>
+
+        <div class="illrigger classes">
+            <h1>Illrigger</h1>
+        <button id="illrigger-button" class="char-button"></button>
+        <div>
+            <h2>Hit Dice: </h2>
+            <h2>Proficiencies: </h2>
+            <h2>Saving Throws: </h2>
+        </div>
+        </div> -->
+    
+</footer>
+
+</body>
+</html>

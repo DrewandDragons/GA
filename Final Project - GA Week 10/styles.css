@@ -1,0 +1,348 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: black;
+}
+
+/* h1 {
+    background-image: url("https://image.shutterstock.com/image-photo/narrow-old-paper-fantasy-style-260nw-1609931176.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}    */
+
+footer {
+    margin-top: -11%;
+    z-index: 10;
+    width: 100%;
+    flex-shrink: inherit;
+}
+
+.logo {
+    background-color: none;
+    background-image: none;
+    background: transparent;
+}
+
+.canvas {
+    display: flex;
+    flex-direction: row;
+    background-image: url("https://media.istockphoto.com/photos/aged-paper-texture-picture-id920143058?k=20&m=920143058&s=612x612&w=0&h=BL3jEk-dcfr1LFHL6pdVMrdS28Q0rafLHhFuz2gf62U=");
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-shrink: inherit;
+}
+
+
+.left-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    text-align: center;
+    flex-shrink: inherit;
+}
+
+.party-select {
+    display: none;
+    flex-direction: column;
+    flex-shrink: inherit;
+}
+
+.creater-links {
+    display: none;
+    width: 10%;
+    flex-shrink: inherit;
+}
+
+.character-num {
+    flex-shrink: inherit;
+    background-color:  black;
+    color: white;
+    width:  7em;
+    height: 4em;
+    margin: 1em;
+}
+
+.character-num:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* This is where the center viewport is */
+
+.vtt {
+    display: contents;
+    width: 80%;
+    height: fit-content;
+    flex-shrink: inherit;
+    /* can I make this a variable? */
+}
+
+/* .new-char-card {
+    display: block;
+    border: 5px solid black;
+} */
+
+/* This is where the right menu is */
+
+.right-menu {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    text-align: center;
+    flex-shrink: inherit;
+}
+
+.character-names { 
+    display: none;
+    flex-direction: column;
+    flex-shrink: inherit;
+    margin-top: 2em;
+}
+
+.name-fields {
+    flex-shrink: inherit;
+}
+
+.character-name {
+    color: green;
+}
+
+
+/* This is where the footer is */
+/* Changing display to none will get rid of it all, flex is what we are using   */
+.character-selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.classes {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: inherit;
+    flex-grow: 1;
+    width: auto;
+    border: 1px solid black;
+    opacity: .75;
+    transition: 3s;
+}
+
+.classes:hover {
+    opacity: 1;
+    animation: forwards;
+    animation-duration: 5s;
+    margin-top: -35%;
+    flex-grow: 3;
+    z-index: 11;
+}
+
+
+
+
+.starting-stats {
+    display: none;
+}
+
+.starting-stats:hover {
+    display: contents;
+}
+
+
+
+/* 
+Character buttons - show tokens and clickable and hoverbale, their value is the api name for the class */
+
+.char-button {
+    border-radius: 50%;
+    width: 7em;
+    height: 10em;
+    margin: 10px 10px 10px 10px;
+    border: 5px solid black;
+}
+
+.char-button:hover {
+    background-size: 0%;
+    border-color: red;
+    border-width: 5px;
+    cursor: pointer;
+}
+
+/* Classes cards CSS - rounded tops | lower tranparancey when they are not being hovered | some sort of colored / moving border using that one "nutty" showed us | */
+
+.barbarian {
+    background-color: red;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.bard {
+    background-color: pink;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.cleric {
+    background-color: yellow;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.druid {
+    background-color: green;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.fighter {
+    background-color: red;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.monk {
+    background-color: orange;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.paladin {
+    background-color: gold;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.ranger {
+    background-color: forestgreen;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.rogue {
+    background-color: darkblue;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.sorcerer {
+    background-color: blueviolet;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.warlock {
+    background-color: purple;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.wizard {
+    background-color: #017DBA;
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* Class Button CSS*/
+
+#barbarian-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-7-barbarian.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#bard-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-9-bard.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#cleric-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-13-cleric.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#druid-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-11-druid.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#fighter-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-4-fighter.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#monk-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-6-monk.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#paladin-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-3-paladin.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#ranger-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-2-ranger.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#rogue-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-12-rouge.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#sorcerer-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-14-sorcerer.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+#warlock-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-1-warlock.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+#wizard-button {
+    background-position: 100%;
+    background-image: url("imgs/pop-up/franco-dnd-classes-8-wizard.jpg");
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+/* Images  or maps*/
+#vestibule {
+    width: 70%;
+    height: auto;
+    max-width: fit-content;
+    flex-shrink: inherit;
+}
+
