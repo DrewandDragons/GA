@@ -2,10 +2,10 @@
 
 let filler = document.getElementById('filler')
 let ribbon = document.querySelector(".classes")
-
-
+let pcCard = document.querySelector(".starting-stats")
 const classApi = `https://www.dnd5eapi.co/api/classes/`
 
+//Consts above 
 
 async function get5E() {
     const response = await fetch(classApi);
@@ -19,33 +19,46 @@ async function getClasses(url) {
     const response = await fetch(url);
     const classesData = await response.json();
     return classesData
-}
 
+}
 
 
 document.querySelectorAll('.classes').forEach(item => {
     item.addEventListener('mouseover', event => {
-      //what happens (arrow function) when there is a hover?
+      
+        let filler = document.getElementById('filler')
+        let classes = item.dataset.characterClass
+        const classesApi = `https://www.dnd5eapi.co/api/classes/${classes}/`
+        
+
+        getClasses(classesApi).then( results => {
+            console.log(results)
+        })
+    })
+
+    //trying to get text to show when they get to 4fr size... though now I think that wont work on smaller screeen
+})
+
+//what happens (arrow function) when there is a hover?
       //get the json of the class we are hovering over
       //item - has a character class item.dataset.characterClass 
       //characterClass is used for API call 
       // then use the find the children of that itme needed 
-
       //how am I getting the hit die humber into the h3?
-        let classes = item.dataset.characterClass
-
-        const classesApi = `https://www.dnd5eapi.co/api/classes/${classes}/`
-      
-        let results = getClasses(classesApi);
-
-        console.log(results)
-        // filler.innerText = results.objectPromise.object
-    })
-    
-    //trying to get text to show when they get to 4fr size... though now I think that wont work on smaller screeen
 
 
-  })
+// if function ot get the card to show upon how big the card gets.
+
+// function showCard(ribbon) {
+// if (ribbon?.width = 1) { console.log("too small") 
+// return 
+// }
+// if (ribbon.width >= 2) {
+//     pcCard.display = 
+//     console.log('success')
+// } else {
+//     null
+// }
 
 
 //Dice Rolling Functions 
@@ -167,4 +180,4 @@ function dicePool(obj){
 // let dogPic = response.data.message
 // imageDiv.innerHTML = `<img src=${dogPic}>`
 
-// })
+//

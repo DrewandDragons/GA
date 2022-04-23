@@ -15,7 +15,7 @@ body {
 
 
 footer {
-    margin-top: -11%;
+    margin-top: -10%;
     z-index: 10;
     width: 100%;
     flex-shrink: inherit;
@@ -101,6 +101,8 @@ footer {
     text-align: center;
     flex-shrink: inherit;
 }
+ 
+/* Createthe sides so that they flex to get smaller  */
 
 .character-names { 
     display: none;
@@ -143,7 +145,7 @@ footer {
 
 .classes:hover {
     opacity: 1;
-    margin-top: -35%;
+    margin-top: -30%;
     flex-grow: 4;
     z-index: 11;
 }
