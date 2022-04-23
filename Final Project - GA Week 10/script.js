@@ -1,6 +1,12 @@
 // let partySize = document.querySelector
 
+let filler = document.getElementById('filler')
+let ribbon = document.querySelector(".classes")
+
+
 const classApi = `https://www.dnd5eapi.co/api/classes/`
+
+
 async function get5E() {
     const response = await fetch(classApi);
     const data = await response.json();
@@ -8,19 +14,39 @@ async function get5E() {
 }
 get5E();
 
-// on click of the button, a "card" is created on the canvas, their sheet is rolled, and presented in their "card" roll the characters - collect name, make rules that wont let them do more than 1 of each class,  rand so we can have them all rolled as you as we begin in the MCDM 4d6dl x 6 filling starting with STR 
-// clikc listener, event target value, would equal classes, give all of the items in the html a value of the class name
-
-let classes = 'paladin'
-
-const barbApi = `https://www.dnd5eapi.co/api/classes/${classes}/`
-async function getBarb() {
+async function getClasses(url) {
     
-    const response = await fetch(barbApi);
-    const barbData = await response.json();
-    console.log(barbData)
+    const response = await fetch(url);
+    const classesData = await response.json();
+    return classesData
 }
-getBarb();
+
+
+
+document.querySelectorAll('.classes').forEach(item => {
+    item.addEventListener('mouseover', event => {
+      //what happens (arrow function) when there is a hover?
+      //get the json of the class we are hovering over
+      //item - has a character class item.dataset.characterClass 
+      //characterClass is used for API call 
+      // then use the find the children of that itme needed 
+
+      //how am I getting the hit die humber into the h3?
+        let classes = item.dataset.characterClass
+
+        const classesApi = `https://www.dnd5eapi.co/api/classes/${classes}/`
+      
+        let results = getClasses(classesApi);
+
+        console.log(results)
+        // filler.innerText = results.objectPromise.object
+    })
+    
+    //trying to get text to show when they get to 4fr size... though now I think that wont work on smaller screeen
+
+
+  })
+
 
 //Dice Rolling Functions 
 
@@ -56,7 +82,6 @@ const newCharWis = { 6: 4};
 const newCharCha = { 6: 4};
 
 const barbHit = { 12: 1};
-const 
 
 //make a function that allows us to roll a pool of dice | 2d6 + 5d10 |
 
@@ -75,8 +100,11 @@ function dicePool(obj){
 }
 
 
+
+
+
 //I wnat to code that when I hover over a conatier, it reveals its content.
- let monk = document.querySelector("#monk")
+ // data 
 
 
 

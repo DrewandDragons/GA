@@ -12,6 +12,8 @@ body {
     background-repeat: no-repeat;
 }    */
 
+
+
 footer {
     margin-top: -11%;
     z-index: 10;
@@ -136,30 +138,36 @@ footer {
     width: auto;
     border: 1px solid black;
     opacity: .75;
-    transition: 3s;
+    transition: 2.5s;
 }
 
 .classes:hover {
     opacity: 1;
-    animation: forwards;
-    animation-duration: 5s;
     margin-top: -35%;
-    flex-grow: 3;
+    flex-grow: 4;
     z-index: 11;
 }
 
 
-
-
 .starting-stats {
     display: none;
+    transform: scale(.1);
+    transition: 3s;
 }
 
-.starting-stats:hover {
+
+/* .starting-stats div {
+    transform: scale(.2);
+    transition: 2s;
+} */
+
+/* .classes:hover .starting-stats {
     display: contents;
-}
+} */
 
-
+/* .classes:hover .starting-stats div {
+    transform: scale(1);
+} */
 
 /* 
 Character buttons - show tokens and clickable and hoverbale, their value is the api name for the class */
@@ -179,7 +187,7 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
     cursor: pointer;
 }
 
-/* Classes cards CSS - rounded tops | lower tranparancey when they are not being hovered | some sort of colored / moving border using that one "nutty" showed us | */
+/* Classes ribbons CSS - rounded tops | lower tranparancey when they are not being hovered | some sort of colored / moving border using that one "nutty" showed us | */
 
 .barbarian {
     background-color: red;
@@ -187,12 +195,12 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
 }
 
 .bard {
-    background-color: pink;
+    background-color: rgb(234, 187, 194);
     border-radius: 15px 15px 0px 0px;
 }
 
 .cleric {
-    background-color: yellow;
+    background-color: white;
     border-radius: 15px 15px 0px 0px;
 }
 
