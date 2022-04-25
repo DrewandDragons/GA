@@ -157,7 +157,7 @@ footer {
     width: 50px;
     border: 1px solid black;
     opacity: .8;
-    transition: 2s;
+    transition: 2s ease;
     padding: 1px, 1px, 1px, 1px;
 }
 
@@ -256,12 +256,30 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
     border-radius: 15px 15px 0px 0px;
 }
 
-
+.bard:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(125,8,99,1) 100%),
+        url('imgs/overlays/Bard.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
 
 .cleric {
     background: rgb(10,3,30);
     background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(224,232,17,1) 100%);
     border-radius: 15px 15px 0px 0px;
+}
+ 
+.cleric:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(224,232,17,1) 100%),
+        url('imgs/overlays/Cleric.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
 }
 
 .druid {
@@ -270,10 +288,30 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
     border-radius: 15px 15px 0px 0px;
 }
 
+.druid:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(101,232,17,1) 100%),
+        url('imgs/overlays/Druid.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
 .fighter {
     background: rgb(10,3,30);
     background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(232,46,17,1) 100%);
     border-radius: 15px 15px 0px 0px;
+}
+
+.fighter:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(232,46,17,1) 100%),
+        url('imgs/overlays/Fighter.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
 }
 
 .monk {
@@ -282,10 +320,30 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
     border-radius: 15px 15px 0px 0px;
 }
 
+.monk:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(232,154,17,1) 100%),
+        url('imgs/overlays/Monk.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
 .paladin {
     background: rgb(10,3,30);
     background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(203,185,16,1) 100%);
     border-radius: 15px 15px 0px 0px;
+}
+
+.paladin:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(203,185,16,1) 100%),
+        url('imgs/overlays/Paladin.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
 }
 
 .ranger {
@@ -294,10 +352,30 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
     border-radius: 15px 15px 0px 0px;
 }
 
+.ranger:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(7,98,37,1) 100%),
+        url('imgs/overlays/Ranger.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
 .rogue {
     background: rgb(10,3,30);
     background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(7,16,98,1) 100%);
     border-radius: 15px 15px 0px 0px;
+}
+
+.rogue:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(7,16,98,1) 100%),
+        url('imgs/overlays/Rogue.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
 }
 
 .sorcerer {
@@ -306,16 +384,46 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
     border-radius: 15px 15px 0px 0px;
 }
 
+.sorcerer:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(140,13,179,1) 100%),
+        url('imgs/overlays/Sorcerer.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
 .warlock {
     background: rgb(17,2,22);
-background: linear-gradient(180deg, rgba(17,2,22,1) 0%, rgba(128,13,120,1) 100%);
+    background: linear-gradient(180deg, rgba(17,2,22,1) 0%, rgba(128,13,120,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
+.warlock:hover {
+    background-image: 
+        linear-gradient(180deg, rgba(17,2,22,1) 0%, rgba(128,13,120,1) 100%),
+        url('imgs/overlays/Warlock.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
 .wizard {
+    background: rgb(17,2,22);
     background: linear-gradient(360deg, #00d2ff 0%, #3a47d5 100%);
-    /* background-color: #017DBA; */
     border-radius: 15px 15px 0px 0px;
+}
+
+.wizard:hover {
+    background-image: 
+        linear-gradient(360deg, #00d2ff 0%, #3a47d5 100%),
+        url('imgs/overlays/Wizard.png');
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
 }
 
 /* Class Button CSS*/
