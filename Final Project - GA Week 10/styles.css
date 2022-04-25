@@ -525,14 +525,14 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
 
 /* Images  or maps*/
 #vestibule {
-    
+    border-radius: 1em;
     width: 100%;
     height: 100%;
     max-width: fit-content;
     flex-shrink: inherit;
 }
 
-@media all and (max-width: 1500px) and (min-width: 901px) {
+@media all and (max-width: 1500px) and (min-width: 1151px) {
     .classes .char-button {
         order: 0;
         
@@ -550,7 +550,7 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
 
 }
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1150px) {
  .canvas {
     display: none;
  }   
