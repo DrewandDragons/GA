@@ -1,10 +1,12 @@
-body {
+/* body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
     background-color: black;
-}
+    overflow-wrap: break-word;
+} */
+
 
 /* h1 {
     background-image: url("https://image.shutterstock.com/image-photo/narrow-old-paper-fantasy-style-260nw-1609931176.jpg");
@@ -12,10 +14,16 @@ body {
     background-repeat: no-repeat;
 }    */
 
+body {
+    background-color: black;
+}
 
+header {
+    color: orange;
+    text-align: center;
+}
 
 footer {
-    margin-top: -10%;
     z-index: 10;
     width: 100%;
     flex-shrink: inherit;
@@ -32,7 +40,7 @@ footer {
     flex-direction: row;
     background-image: url("https://media.istockphoto.com/photos/aged-paper-texture-picture-id920143058?k=20&m=920143058&s=612x612&w=0&h=BL3jEk-dcfr1LFHL6pdVMrdS28Q0rafLHhFuz2gf62U=");
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-shrink: inherit;
 }
 
@@ -42,7 +50,8 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 10%;
+    height: 1fr;
+    width: 1fr;
     text-align: center;
     flex-shrink: inherit;
 }
@@ -77,11 +86,12 @@ footer {
 /* This is where the center viewport is */
 
 .vtt {
-    display: contents;
-    width: 80%;
+    align-self: center;
+    justify-self: center;
+    height: 1fr;
+    width: 3fr;
     height: fit-content;
     flex-shrink: inherit;
-    /* can I make this a variable? */
 }
 
 /* .new-char-card {
@@ -92,16 +102,22 @@ footer {
 /* This is where the right menu is */
 
 .right-menu {
-    /* background-color: green; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 10%;
+    height: 1fr;
+    width: 1fr;
     text-align: center;
     flex-shrink: inherit;
 }
  
+.side {
+    text-size-adjust: auto;
+    word-wrap: inherit;
+}
+
+
 /* Createthe sides so that they flex to get smaller  */
 
 .character-names { 
@@ -137,11 +153,16 @@ footer {
     justify-content: flex-start;
     flex-shrink: inherit;
     flex-grow: 1;
-    width: auto;
+    width: 50px;
     border: 1px solid black;
-    opacity: .75;
-    transition: 2.5s;
+    opacity: .8;
+    transition: 2s;
 }
+
+/* .classes:nth-child(3) {
+    background-color: red;
+
+} */
 
 .classes:hover {
     opacity: 1;
@@ -150,13 +171,28 @@ footer {
     z-index: 11;
 }
 
-
-.starting-stats {
-    display: none;
-    transform: scale(.1);
-    transition: 3s;
+.card-header {
+    opacity: 1;
+    text-size-adjust: inherit;
+    transition: 2s;
 }
 
+.pros {
+    color: white;
+}
+
+
+.starting-stats {
+    color: white;
+    display: none;
+    background-position: cover;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-decoration:double;
+    flex-direction: column;
+    transform: scale(1);
+    width: 100%;
+}
 
 /* .starting-stats div {
     transform: scale(.2);
@@ -175,12 +211,14 @@ footer {
 Character buttons - show tokens and clickable and hoverbale, their value is the api name for the class */
 
 .char-button {
+    opacity: 1;
     border-radius: 50%;
     width: 7em;
     height: 10em;
     margin: 10px 10px 10px 10px;
     border: 5px solid black;
 }
+
 
 .char-button:hover {
     background-size: 0%;
@@ -191,63 +229,89 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
 
 /* Classes ribbons CSS - rounded tops | lower tranparancey when they are not being hovered | some sort of colored / moving border using that one "nutty" showed us | */
 
+
+
 .barbarian {
-    background-color: red;
+    background: rgb(10,3,30);
+background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(125,8,8,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
+/* .barbarian:hover {
+    background-color: black;
+    color: red;
+} */
+
+/* .barbarian:hover .barb-card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: inherit;
+    transition: 3s;
+} */
+
 .bard {
-    background-color: rgb(234, 187, 194);
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(125,8,99,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .cleric {
-    background-color: white;
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(224,232,17,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .druid {
-    background-color: green;
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(101,232,17,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .fighter {
-    background-color: red;
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(232,46,17,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .monk {
-    background-color: orange;
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(232,154,17,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .paladin {
-    background-color: gold;
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(203,185,16,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .ranger {
-    background-color: forestgreen;
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(7,98,37,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .rogue {
-    background-color: darkblue;
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(7,16,98,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .sorcerer {
-    background-color: blueviolet;
+    background: rgb(10,3,30);
+    background: linear-gradient(180deg, rgba(10,3,30,1) 0%, rgba(140,13,179,1) 100%);   
     border-radius: 15px 15px 0px 0px;
 }
 
 .warlock {
-    background-color: purple;
+    background: rgb(17,2,22);
+background: linear-gradient(180deg, rgba(17,2,22,1) 0%, rgba(128,13,120,1) 100%);
     border-radius: 15px 15px 0px 0px;
 }
 
 .wizard {
-    background-color: #017DBA;
+    background: linear-gradient(360deg, #00d2ff 0%, #3a47d5 100%);
+    /* background-color: #017DBA; */
     border-radius: 15px 15px 0px 0px;
 }
 
@@ -350,9 +414,58 @@ Character buttons - show tokens and clickable and hoverbale, their value is the 
 
 /* Images  or maps*/
 #vestibule {
-    width: 70%;
-    height: auto;
+    
+    width: 100%;
+    height: 100%;
     max-width: fit-content;
     flex-shrink: inherit;
 }
 
+@media all and (max-width: 1300px) and (min-width: 801px) {
+    .classes .char-button {
+        order: 0;
+        
+    }
+    .classes .pros {
+        order: 1;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
+
+    .char-button {
+        width: 4em;
+        height: 6em;
+    }
+
+}
+
+@media all and (max-width: 800px) {
+ .canvas {
+    display: none;
+ }   
+.character-selection {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0px;
+}
+.classes {
+    width: 100%;
+}
+
+.classes:hover {
+    margin-top: 0%;
+}
+
+.classes:hover .card-header {
+    padding-top: 50px;
+}
+
+
+/* .classes:hover .starting-stats {
+    flex-direction: row;
+    justify-self: flex-start;
+    align-self: flex-start;
+    flex-wrap: wrap;
+} */
+
+}

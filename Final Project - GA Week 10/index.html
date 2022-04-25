@@ -10,6 +10,9 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Hover over a D&D 5e class ribbon below and click thier icon to see thier info!</h1>
+    </header>
 <div class="canvas">
     <div class="left-menu">
         <a target="blank" href="https://startplaying.games/gm/drewanddragons"><img width="50%
@@ -42,8 +45,8 @@
     </div>
     <div class="right-menu"><!--this is the right bar section-->
         <a target="blank" href="https://startplaying.games/gm/drewanddragons"><img width="50%" src="imgs/Drew_&_Dragons_Logo_Main.png" alt=""></a>
-        <h1 class="side">Click the <br> Drew & Dragons logo to check out Startplaying.games and find and open seat!</h1>
-        <h1 class="side">Check out the map pack pack creator:</h1>
+        <!-- <h1 class="side">Click the <br> Drew & Dragons logo to check out Startplaying.games and find and open seat!</h1> -->
+        <h1 class="side">Check out the map pack creator:</h1>
         <!--Drew and Dragons Logo, Start Playing.games logo, Epic Isomectric Logo-->
         <a target="blank" href="https://www.patreon.com/epicisometric/posts"><img width="80%" src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/85457/1acb2e73617e4441beaad1b02ab254a4/eyJ3IjoyMDB9/21.png?token-time=2145916800&token-hash=JnHZdkDASKB1VNESZbqX7ipyazABBcD40aQZL6OTHj4%3D" alt=""></a>
         <div class="character-names">
@@ -80,218 +83,159 @@
         </div> -->
     
     <div data-character-class="barbarian" class="barbarian classes">
-       <h1>Barbarian</h1>
-       <button value="barbarian" id="barbarian-button" class="char-button"></button>
-        <div class="barb-card starting-stats">
-            <div>Hit Die</div>
-            <h3 data-character-hit-die></h3>
-            <div>Saving Throws:</div>
-            <h3 data-character-saving-throws></h3>
-            <div>Proficiencies:</div>
-            <h3 data-character-proficiencies></h3>
-            <!-- <h3>Armor: Light armor, medium armor, shields <br>
-                Weapons: Simple weapons, martial weapons <br>
-                Tools: None 
-            </h3> -->
+       <h1 class="card-header pros">Barbarian</h1>
+       <button value="barbarian" id="barbarian-button" class="char-button card-header"></button>
+        <div data-card class="barb-card starting-stats">
+        <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
+        <h2>Saving Throws:</h2>
+            <h3 data-pcSaves></h3>
+        <h2>Proficiencies:</h2>
+            <h3 data-pcProfs></h3>
         </div>
     </div>
     
     <div data-character-class="bard" class="bard classes">
-       <h1>Bard</h1>
-       <button value="bard" id="bard-button" class="char-button"></button>
-    <div class="bard-card starting-stats">
-        <h2>Hit Dice:</h2>
-        <h3>d8</h3>
-        <h2>Primary Ability:</h2>
-        <h3>Charisma</h3>
+       <h1 class="card-header pros">Bard</h1>
+       <button value="bard" id="bard-button" class="char-button card-header"></button>
+    <div data-card class="bard-card starting-stats">
+        <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
         <h2>Saving Throws:</h2>
-        <h3>Dexterity, Charisma</h3>
+            <h3 data-pcSaves></h3>
         <h2>Proficiencies:</h2>
-        <h3>Armor: Light armor <br>
-            Weapons: Simple weapons, hand crossbows, longswords, rapiers, shortswords <br>
-            Tools: Three musical instruments of your choice
-            </h3>
+            <h3 data-pcProfs></h3>
         </div>
     </div>
 
     <div data-character-class="cleric" class="cleric classes">
-        <h1>Cleric</h1>
-        <button value="cleric" id="cleric-button" class="char-button"></button>
-        <div class="cleric-card starting-stats">
-            <h2>Hit Dice:</h2>
-            <h3>d8</h3>
-            <h2>Primary Ability:</h2>
-            <h3>Wisdom</h3>
-            <h2>Saving Throws:</h2>
-            <h3>Wisdom, Charisma</h3>
-            <h2>Proficiencies:</h2>
-            <h3>Armor: Light armor, medium armor, shields <br>
-                Weapons: Simple weapons <br>
-                Tools: None
-                </h3>
-            </div>
+        <h1 class="card-header pros">Cleric</h1>
+        <button value="cleric" id="cleric-button" class="char-button card-header"></button>
+        <div data-card class="cleric-card starting-stats">
+        <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
+        <h2>Saving Throws:</h2>
+            <h3 data-pcSaves></h3>
+        <h2>Proficiencies:</h2>
+            <h3 data-pcProfs></h3>
+        </div>
     </div>
 
     <div data-character-class="druid" class="druid classes">
-        <h1>Druid</h1>
-       <button value="druid" id="druid-button" class="char-button"></button>
-       <div class="druid-card starting-stats">
-        <h2>Hit Dice:</h2>
-        <h3>d8</h3>
-        <h2>Primary Ability:</h2>
-        <h3>Wisdom</h3>
+        <h1 class="card-header pros">Druid</h1>
+       <button value="druid" id="druid-button" class="char-button card-header"></button>
+       <div data-card class="druid-card starting-stats">
+        <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
         <h2>Saving Throws:</h2>
-        <h3>Intelligence, Wisdom</h3>
+            <h3 data-pcSaves></h3>
         <h2>Proficiencies:</h2>
-        <h3>Armor: Light armor, medium armor, shields (druids will not wear armor or use shields made of metal) <br>
-            Weapons: Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears <br>
-            Tools: Herbalism kit
-            </h3>
+            <h3 data-pcProfs></h3>
         </div>
     </div>
 
     <div data-character-class="fighter" class="fighter classes">
-       <h1>Fighter</h1>
-       <button value="fighter" id="fighter-button" class="char-button"></button>
-       <div class="fighter-card starting-stats">
-        <h2>Hit Dice:</h2>
-        <h3>d10</h3>
-        <h2>Primary Ability:</h2>
-        <h3>Strength or Dexterity</h3>
+       <h1 class="card-header pros">Fighter</h1>
+       <button value="fighter" id="fighter-button" class="char-button card-header"></button>
+       <div data-card class="fighter-card starting-stats">
+        <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
         <h2>Saving Throws:</h2>
-        <h3>Strength, Constitution</h3>
+            <h3 data-pcSaves></h3>
         <h2>Proficiencies:</h2>
-        <h3>Armor: All armor, shields <br>
-            Weapons: Simple weapons, martial weapons <br>
-            Tools: None
-            </h3>
+            <h3 data-pcProfs></h3>
         </div>
     </div>
     
     <div data-character-class="monk" class="monk classes">
-        <h1>Monk</h1>
-        <button value="monk" id="monk-button" class="char-button"></button>
-        <div class="monk-card starting-stats">
-            <h2>Hit Dice:</h2>
-            <h3>d8</h3>
-            <h2>Primary Ability:</h2>
-            <h3>Dexterity and Wisdom</h3>
-            <h2>Saving Throws:</h2>
-            <h3>Strength, Dexterity</h3>
-            <h2>Proficiencies:</h2>
-            <h3>Armor: None <br>
-                Weapons: Simple weapons, shortswords <br>
-                Tools: Choose one type of artisan tools or one musical instrument
-            </h3>
-            </div>
+        <h1 class="card-header pros">Monk</h1>
+        <button value="monk" id="monk-button" class="char-button card-header"></button>
+        <div data-card class="monk-card starting-stats">
+            <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
+        <h2>Saving Throws:</h2>
+            <h3 data-pcSaves></h3>
+        <h2>Proficiencies:</h2>
+            <h3 data-pcProfs></h3>
+        </div>
     </div>
 
     <div data-character-class="paladin" class="paladin classes">
-        <h1>Paladin</h1>
-       <button value="paladin" id="paladin-button" class="char-button"></button>
-       <div class="paladin-card starting-stats">
-        <h2>Hit Dice:</h2>
-        <h3>d10</h3>
-        <h2>Primary Ability:</h2>
-        <h3>Strength and Charisma</h3>
+        <h1 class="card-header pros">Paladin</h1>
+       <button value="paladin" id="paladin-button" class="char-button card-header"></button>
+       <div data-card class="paladin-card starting-stats">
+        <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
         <h2>Saving Throws:</h2>
-        <h3>Wisdom, Charisma</h3>
+            <h3 data-pcSaves></h3>
         <h2>Proficiencies:</h2>
-        <h3>Armor: All armor, shields <br>
-            Weapons: Simple weapons, martial weapons <br>
-            Tools: None
-            </h3>
+            <h3 data-pcProfs></h3>
         </div>
     </div>
     
     <div data-character-class="ranger" class="ranger classes">
-       <h1>Ranger</h1>
-       <button value="ranger" id="ranger-button" class="char-button"></button>
-       <div class="ranger-card starting-stats">
-        <h2>Hit Dice:</h2>
-        <h3>d10</h3>
-        <h2>Primary Ability:</h2>
-        <h3>Dexterity and Wisdom</h3>
+       <h1 class="card-header pros">Ranger</h1>
+       <button value="ranger" id="ranger-button" class="char-button card-header"></button>
+       <div data-card class="ranger-card starting-stats">
+        <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
         <h2>Saving Throws:</h2>
-        <h3>Strength, Dexterity</h3>
+            <h3 data-pcSaves></h3>
         <h2>Proficiencies:</h2>
-        <h3>Armor: Light armor, medium armor, shields <br>
-            Weapons: Simple weapons, martial weapons <br>
-            Tools: None
-            </h3>
+            <h3 data-pcProfs></h3>
         </div>
     </div>
     
     <div data-character-class="rogue" class="rogue classes">
-            <h1>Rogue</h1>
-        <button value="rogue" id="rogue-button" class="char-button"></button>
-        <div class="rogue-card starting-stats">
-            <h2>Hit Dice:</h2>
-            <h3>d8</h3>
-            <h2>Primary Ability:</h2>
-            <h3>Dexterity</h3>
-            <h2>Saving Throws:</h2>
-            <h3>Dexterity, Intelligence</h3>
-            <h2>Proficiencies:</h2>
-            <h3>Armor: Light armor <br>
-                Weapons: Simple weapons, hand crossbows, longswords, rapiers, shortswords <br>
-                Tools: Thieves tools
-            </h3>
-            </div>
+        <h1 class="card-header pros">Rogue</h1>
+        <button value="rogue" id="rogue-button" class="char-button card-header"></button>
+        <div data-card class="rogue-card starting-stats">
+            <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
+        <h2>Saving Throws:</h2>
+            <h3 data-pcSaves></h3>
+        <h2>Proficiencies:</h2>
+            <h3 data-pcProfs></h3>
+        </div>
     </div>
 
     <div data-character-class="sorcerer" class="sorcerer classes">
-            <h1>Sorcerer</h1>
-        <button value="sorcerer" id="sorcerer-button" class="char-button"></button>
-        <div class="sorcerer-card starting-stats">
-            <h2>Hit Dice:</h2>
-            <h3>d6</h3>
-            <h2>Primary Ability:</h2>
-            <h3>Charisma</h3>
-            <h2>Saving Throws:</h2>
-            <h3>Constitution, Charisma</h3>
-            <h2>Proficiencies:</h2>
-            <h3>Armor: None <br>
-                Weapons: Daggers, darts, slings, quarterstaffs, light crossbows <br>
-                Tools: None
-                </h3>
-            </div>
+        <h1 class="card-header pros">Sorcerer</h1>
+        <button value="sorcerer" id="sorcerer-button" class="char-button card-header"></button>
+        <div data-card class="sorcerer-card starting-stats">
+            <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
+        <h2>Saving Throws:</h2>
+            <h3 data-pcSaves></h3>
+        <h2>Proficiencies:</h2>
+            <h3 data-pcProfs></h3>
+        </div>
     </div>
 
     <div data-character-class="warlock" class="warlock classes">
-            <h1>Warlock</h1>
-        <button value="warlock" id="warlock-button" class="char-button"></button>
-        <div class="warlock-card starting-stats">
-            <h2>Hit Dice:</h2>
-            <h3>d8</h3>
-            <h2>Primary Ability:</h2>
-            <h3>Charisma</h3>
-            <h2>Saving Throws:</h2>
-            <h3>Wisdom, Charisma</h3>
-            <h2>Proficiencies:</h2>
-            <h3>Armor: Light armor <br>
-                Weapons: Simple weapons <br>
-                Tools: None
-                </h3>
-            </div>
+        <h1 class="card-header pros">Warlock</h1>
+        <button value="warlock" id="warlock-button" class="char-button card-header"></button>
+        <div data-card class="warlock-card starting-stats">
+        <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
+        <h2>Saving Throws:</h2>
+            <h3 data-pcSaves></h3>
+        <h2>Proficiencies:</h2>
+            <h3 data-pcProfs></h3>
+        </div>
     </div>
 
     <div data-character-class="wizard" class="wizard classes">
-            <h1>Wizard</h1>
-        <button value="wizard" id="wizard-button" class="char-button"></button>
-        <div class="wizard-card starting-stats">
-            <h2>Hit Dice:</h2>
-            <h3>d6</h3>
-            <h2>Primary Ability:</h2>
-            <h3>Intelligence</h3>
-            <h2>Saving Throws:</h2>
-            <h3>Intelligence, Wisdom</h3>
-            <h2>Proficiencies:</h2>
-            <h3>Armor: None <br>
-                Weapons: Daggers, darts, slings, quarterstaffs, light crossbows <br>
-                Tools: None
-                </h3>
-            </div>
+        <h1 class="card-header pros">Wizard</h1>
+        <button value="wizard" id="wizard-button" class="char-button card-header"></button>
+        <div data-card class="wizard-card starting-stats">
+            <h2>Hit Die:</h2>
+            <h3 data-pcHitDie></h3>
+        <h2>Saving Throws:</h2>
+            <h3 data-pcSaves></h3>
+        <h2>Proficiencies:</h2>
+            <h3 data-pcProfs></h3>
+        </div>
     </div>
 
     <!-- <div class="beastheart classes">

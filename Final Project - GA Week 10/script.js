@@ -6,13 +6,12 @@ let pcCard = document.querySelector(".starting-stats")
 const classApi = `https://www.dnd5eapi.co/api/classes/`
 
 //Consts above 
-
-async function get5E() {
-    const response = await fetch(classApi);
-    const data = await response.json();
-    console.log(data)
-}
-get5E();
+// async function get5E() {
+//     const response = await fetch(classApi);
+//     const data = await response.json();
+//     console.log(data)
+// }
+// get5E();
 
 async function getClasses(url) {
     
@@ -22,22 +21,109 @@ async function getClasses(url) {
 
 }
 
-
 document.querySelectorAll('.classes').forEach(item => {
     item.addEventListener('mouseover', event => {
-      
-        let filler = document.getElementById('filler')
-        let classes = item.dataset.characterClass
-        const classesApi = `https://www.dnd5eapi.co/api/classes/${classes}/`
         
+        // let filler = document.getElementById('filler') this was for the left side far of the canvas dispaly
+        let clazz = item.dataset.characterClass
+        const classesApi = `https://www.dnd5eapi.co/api/classes/${clazz}/`
+        // let classRibbon = document.querySelector(`[data-character-class="${clazz}"] .classes`)
+        // let ribbon = document.querySelector(`[data-character-class="${clazz}"] .starting-stats`)
 
+        
+    
         getClasses(classesApi).then( results => {
+            // // Objects
+            const hitDie = results.hit_die
+            const proficiencies = results.proficiencies.map(prof => prof.name).join(',  ')
+            const savingThrows = results.saving_throws.map(sav => sav.name).join(', ')
+            // //above goes to console
+
+            // hitEle is the hit die number, we add a "d" before the numeric value it comes back with from the API
+            const hitEle = document.querySelector(`[data-character-class="${clazz}"] [data-pcHitDie]`)
+            hitEle.textContent = 'd' + results.hit_die;
+
+            // saveEle is the saving throw the class is proficient in, we have to parse it out of the array to display it in the h3 element 
+            const saveEle = document.querySelector(`[data-character-class="${clazz}"] [data-pcSaves]`)
+            const saveList = results.saving_throws
+              .map(save => save.name)
+              .join(', ');
+            saveEle.textContent = saveList;
+
+        
+            //shows us the proficiencies 
+            // const profEle = document.querySelector('[data-pcProfs]')
+            const profEle = document.querySelector(`[data-character-class="${clazz}"] [data-pcProfs]`)
+            profEle.textContent = proficiencies;
+            
+            // above goes to h3 elements
+            
+            // Results / Calls 
             console.log(results)
+            console.log(hitDie)
+            console.log(proficiencies)
+            console.log(savingThrows)
+            console.log(clazz)
+            // let data-character-hit-die = results.hit_die;
         })
+
+        // PC Card stuff here
+    })
+
+    item.addEventListener('mouseleave', event => {
+        let clazz = item.dataset.characterClass
+        const classesApi = `https://www.dnd5eapi.co/api/classes/${clazz}/`
+        let classRibbon =  document.querySelector(`[data-character-class="${clazz}"]`)
+        let ribbon = document.querySelector(`[data-character-class="${clazz}"] .starting-stats`)
+    
+        ribbon.style.display = 'none'
+
     })
 
     //trying to get text to show when they get to 4fr size... though now I think that wont work on smaller screeen
 })
+
+// attampt to make an event listner for each button, where it will then toggle the contents for its indiviudal card - it would be populated by the hover function  
+
+
+
+// async function bigReveal(event){
+//     let 
+// }
+
+
+document.querySelectorAll(".char-button").forEach(item => {
+    item.addEventListener("click", bigReveal => {
+
+    let clazz = item.value
+    let ribbon = document.querySelector(`[data-character-class="${clazz}"] .starting-stats`)
+
+    // ribbon.style.transform = scale(1.5)
+    // ribbon.style.display = 'flex';
+    if (ribbon.style.display === 'none') {
+            ribbon.style.display = 'flex';
+    } else {  
+        ribbon.style.display = 'none'      
+    }
+
+    })
+
+
+
+})
+
+// function myFunction() {
+//     var x = document.getElementById('myDIV');
+//     if (x.style.display === 'none') {
+//       x.style.display = 'block';
+//     } else {
+//       x.style.display = 'none';
+//     }
+//   }
+
+
+
+
 
 //what happens (arrow function) when there is a hover?
       //get the json of the class we are hovering over
