@@ -9,38 +9,28 @@
     <title>Sunstonepsych</title>
 </head>
 <body>
-    <div class="nav">
-        <!--This is the top with a logo on the left and 5 hyperlinks to other pages on the right. Flex with no bulletted unordered list? or can I use a grid to get them to be aligned?-->
-        <div class="logo">
-        <img src="img/Sunstone logo.jpg" alt="" class="" id="logo1">
-        </div>
-        <div class="links">
-        <a href="" class="nav-item">WHAT WE DO</a>
-        <a href="" class="nav-item">MEET THE TEAM</a>
-        <a href="" class="nav-item">MAKE A REFERRAL</a>
-        <a href="" class="nav-item">AUDIO DOWNLOADS</a>
-        <a href="" class="nav-item">FAQ</a>
+<div class="nav">      
+    <img src="img/Sunstone logo.jpg" alt="" class="logo first" id="top-left-logo">
+    <div class="links nav-links">
+        <a href="/sunstonepsych.com/services.html" class="nav-item">WHAT WE DO</a>
+        <a href="/sunstonepsych.com/meet.html" class="nav-item">MEET THE TEAM</a>
+        <a href="/sunstonepsych.com/referral.html" class="nav-item">MAKE A REFERRAL</a>
+        <a href="/sunstonepsych.com/" class="nav-item">AUDIO DOWNLOADS</a>
+        <a href="/sunstonepsych.com/faq.html" class="nav-item">FAQ</a>
     </div>
-    </div>
-<div class="banner">
-    <!--title slide with background image on right & orange gradient on left. words with light shaded cutouts in foreground-->
-    <div>
-        <!--orange gradient on left-->
-    </div>
-    <div>
-        <!--image on right-->
-        <img src="" alt="">
-    </div> 
-    <!--"head" is the class used to creadet lighter bacgkriund box for both the headers-->
-<div class="title-head">
-    <div class="head-copy" id="large-head"><h1>WE ARE HERE TO HELP</h1></div>
-    <div class="head-copy" id="small-head"><h2>RESTORATION STARTS HERE</h2></div>
 </div>
+
+<div class="head">
+    <div class="title-head">
+        <div class="head-copy"><h1>WE ARE HERE TO HELP</h1></div>
+        <div id="lower-head-copy" class="head-copy"><h2>RESTORATION STARTS HERE</h2></div>
+    </div>
 </div>
+
 <div class="middle-section">
     <!--This is the second head section. split the image into the first div, and the copy into the second to manipulate as shown in wireframe-->
     <div class="middle-image">
-        <img src="" alt=""> 
+        <img id="apple-picture" src="img/sunstone-middle-image.png" alt=""> 
     </div>
     <div class="middle-copy">
         <h3>Work-Related Injuries are Tough...</h3>
@@ -63,92 +53,94 @@
         and surrounding states. Connecting with a therapist
         can be a great way to get the needed support in order
         to help the individual move forward in their personal
-        and professional life. Telehealth and in-person
+        and professional life. Tele-health and in-person
         treatment options are available.</p>
     </div>
 </div>
-<div id="badges">
-<!--4 "badges" that are each a div, hyperlinks to new tabs, some sort of hover animation?-->  
+<div class="lower-section" id="badge-container-one">
     <div class="badge-container">
         <div class="badge"> <!--badge in center, contain box with orange graident above, icon, white -->
             <div class="badge-upper"><!--orange gradient--></div>
-            <img class="badge-image" src="" alt=""> <!--image of badge floating over sandwitching divs-->
+            <a class="badge-link" href=""><img class="badge-image" src="img/image 1.png" alt=""></a><!--image of badge floating over sandwitching divs-->
             <div class="badge-lower"><!--white bottom with text-->
-                <div>
+                <div class="badge-text">
                 <h3>Services</h3>
                 <p>Learn about what we provide.</p>
                 </div>
             </div>
+           
         </div>
         <div class="badge"> <!--badge in center, contain box with orange graident above, icon, white -->
             <div class="badge-upper"><!--orange gradient--></div>
-            <img class="badge-image" src="" alt=""> <!--image of badge floating over sandwitching divs-->
+            <a class="badge-link" href=""><img class="badge-image" src="img/image 4.png" alt=""></a>
             <div class="badge-lower"><!--white bottom with text-->
-                <div>
+                <div class="badge-text">
                 <h3>Meet Us</h3>
                 <p>Get to know our providers and staff.</p>
                 </div>
             </div>
+             
         </div>
         <div class="badge"> <!--badge in center, contain box with orange graident above, icon, white -->
             <div class="badge-upper"><!--orange gradient--></div>
-            <img class="badge-image" src="" alt=""> <!--image of badge floating over sandwitching divs-->
+            <a class="badge-link" href=""><img width="50%" class="badge-image" src="img/image 2.png" alt=""></a>
             <div class="badge-lower"><!--white bottom with text-->
-                <div>
+                <div class="badge-text">
                 <h3>Get Started</h3>
                 <p>Complete a referral form.</p>
                 </div>
             </div>
+             <!--image of badge floating over sandwitching divs-->
         </div>
         <div class="badge"> <!--badge in center, contain box with orange graident above, icon, white -->
             <div class="badge-upper"><!--orange gradient--></div>
-            <img class="badge-image" src="" alt=""> <!--image of badge floating over sandwitching divs-->
+            <a class="badge-link" href=""><img class="badge-image" src="img/image 6.png" alt=""></a> <!--image of badge floating over sandwitching divs-->
             <div class="badge-lower"><!--white bottom with text-->
-                <div>
+                <div class="badge-text">
                 <h3>Audio</h3>
                 <p>Download guided audio sessions.</p>
                 </div>
             </div>
+            
         </div>
-</div>
-<div id="lowers">
-<div class="lower-container">
-<!--questions and connect card, wants name, phone number,m email adress, a mesage intake and a submit button (form) -->
-    <div class="lower-copy">
-        <h3>Questions?<br>Connect with us</h3>
-        <p>We'll get back to you as <br> soon as possible</p>    
     </div>
-    <div class="space"></div>
-    <div class="lower-form"><!--form, do some reasearch befor attempting-->
-        
-        <form action="">
-        <fieldset class="form">
-            <div class="form-main">
-            <input type="text" class="form-inline" id="full-name" placeholder="Name*">
-            <input type="tel" class="form-inline" id="telephone" placeholder="Phone Number*">
-            <input type="text" class="form-inline" id="email" placeholder="Email Address*">
-            <input type="submit" class="form-inline" value="Submit">
+    <div id="lowers">
+    <div class="lower-form">
+            
+            <div class="lower-copy">
+                <h3>Questions?<br>Connect with us</h3>
+                <p>We'll get back to you as <br> soon as possible</p>    
             </div>
-            <div>
-            <textarea id="textarea-1" placeholder="Message"></textarea>
-            </div>
-        </fieldset>
-        </form>
+            <form action="">
+            <fieldset class="form">
+                <div class="form-main">
+                    <input type="text" class="form-inline" id="full-name" placeholder="Name*">
+                    <input type="tel" class="form-inline" id="telephone" placeholder="Phone Number*">
+                    <input type="text" class="form-inline" id="email" placeholder="Email Address*">
+
+                    <input type="submit" class="form-inline" value="Submit">
+                <div>
+                    <textarea id="textarea-1" placeholder="Message"></textarea>
+                </div>
+                </div>
+            </fieldset>
+            </form>
+        </div>
     </div>
 </div>
-</div>
-<footer class="footer">
-<div class="footer-links">
-<!--3 keycontact info: connect with us, site map, links; and a watermark on the bottom left, and the logo on the bottom right -->
-<div>
+</div>    
+<footer class="foot">
+    <div class="footer-links">
+    <!--3 keycontact info: connect with us, site map, links; and a watermark on the bottom left, and the logo on the bottom right -->
+    <div>
     <img src="" alt=""> <!--this is the lower left water mark-->
     </div>
-<div> <!--3 items, connect with us, Site map, and links-->    
-    <div>
+    <div> <!--3 items, connect with us, Site map, and links-->    
+        <div>
         <h3>CONNECT WITH US</h3>
         <p>401 N Morain St <br> Kennewick, WA 99336 
         <br><br>Phone: (509) 735-6616</p>
-    </div>
+        </div>
     <div>
         <h3>SITE MAP</h3>
         <a href="">What We Do</a>
@@ -163,9 +155,7 @@
         <a href="">LinkedIn</a>
         <a href="">American Foundation for <br>Suicide Prevention</a>
     </div>
-    </div>
-<div> <!--bottom right logo of footer-->
-    </div>
+    <div><!--bottom right logo of footer--></div>
 </div>
 </footer>
 </body>

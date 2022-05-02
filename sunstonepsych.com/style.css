@@ -1,29 +1,30 @@
 body {
-    padding: -10px;
-
+    display: flex;
+    flex-direction: column;
+    margin: -0.5em -0.5em -0.5em -0.5em;
 }
-
-
 
 
 .nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    background-color: white;
+    justify-content: center;
+    gap: 0px 10px;
+    background-color: whitep;
+    height: 20em;
 }
 
 .logo {
     width: 20%;
     margin-right: 15%;
+    padding-bottom: 50px;
 }
 
 
 .links {
     display: flex;
     flex-direction: row;
-    text-align: center;
     width: 100%;
     justify-content: space-between;
     white-space: nowrap;
@@ -33,130 +34,120 @@ body {
     text-decoration: none;
     color: orange;
     width: 10%;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
-
-.banner {
-    background-color: orange;
-    height: 500px;
-    width: 100%;
-    margin-top: 5px;
+.head {
     display: flex;
-    justify-content: left;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.title-head {
-    display: flex;
-    flex-direction: column;
+    margin: -5em 0em 0em 0em;
+    background-image: url('img/Artboard\ 1.png');
+    background-size: 100%;
+    height: 46em;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
 .head-copy {
+    color: black;
+    margin: 0em 0em 1em 10em;
     background-color: #FFEEE1;
-    margin: 10px;
-    padding: .5em;
+    padding: .25em .75em .25em .75em;
 }
 
 .middle-section {
+    background-color: white;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .middle-image {
     width: 50%;
+    padding: 5em 2.5em 5em 5em;
 }
 
 .middle-copy {
-    width: 50%;
-    text-align: center;
-    display: block;
+    background-color: white;
+    margin: -10em 5em 0em 5em;
+    padding: 0em 2.5em 5em 5em;
+    text-align: justify;
 }
 
+
+
 .badge-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     background-color: #FBF1DA;
+    display: flex;
+    justify-content: space-around;
 }
 
 .badge {
-    display: flex;
+    position: relative;
+    color: black;
+    background-color: red;
+    text-align: center;
     flex-direction: column;
-    margin: 2em;
-    background-color: orange;
-    height: 100%;
-    width: 200px;
+    align-items: center;
+    justify-content: center;
+    width: 20em;
+    height: 25em;
+    margin: 5em 0em 5em 0em;
+    padding: 0em 0em 0em 0em;
 }
+/* 
+Need the upper to have a gradient the whole time, between them, use the tool and then cut it up */
 
 .badge-upper {
-    display: block;
-    height: 100px;
+    background: rgb(233,177,49);
+    background: linear-gradient(90deg, rgba(233,177,49,1) 30%, rgba(236,129,49,1) 60%);    width: 100%;
+    height: 50%;
+    z-index: 1;
+}
+
+
+
+.badge-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 6em;
+    height: 6em;
+    z-index: 2;
 }
 
 .badge-lower {
-    height: 100px;
-    text-align: center;
     background-color: white;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
 }
 
-.lower-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 5em 5em;
-    background-color: white;
-}
-
-.lower-copy {
-    margin-right: 5em;
+.badge-text {
+    padding: 3em 0em 0em 0em;
 }
 
 .lower-form {
-    background-color: orange;
-}
-
-.form {
     display: flex;
     flex-direction: row;
-    background-color: green;
+    justify-content: center;
+
 }
+
 
 .form-main {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
-.form-inline {
-    margin: 7px;
-    margin-right: 14px;
-}
 
-.footer {
-}
 
-#lowers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#textarea-1 {
-    margin-top: 7px;
-    padding-bottom: 52%;
-}
-
-#logo1 {
-    width: 100%;
-    margin-bottom: -10px;
-}
-
-#large-head {
-    color: red;
-    
-}
-
-#small-head {
-    color: blue;
+#lower-head-copy {
+    margin-right: 3em;
 }
