@@ -4,6 +4,9 @@ body {
     margin: -0.5em -0.5em -0.5em -0.5em;
 }
 
+input {
+    width: 12rem;
+}
 
 .nav {
     display: flex;
@@ -110,7 +113,6 @@ Need the upper to have a gradient the whole time, between them, use the tool and
 }
 
 
-
 .badge-image {
     position: absolute;
     top: 50%;
@@ -137,17 +139,69 @@ Need the upper to have a gradient the whole time, between them, use the tool and
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    align-items: center;
+    /* margin: 5rem 0rem 0rem 0rem; */
 }
 
+.form-inside {
+    margin: 7rem 2.5rem 7rem 2.5rem;
+}
 
-.form-main {
+.lower-copy {
+    text-align:start
+}
+
+.form {
+    border: none;
     display: flex;
     flex-direction: column;
 }
 
+.form-inline {
+    margin: 1rem 0rem 1rem 0rem;
+    height: 2.25rem;
+    width: 25rem;
+    background-color: #FBF1DA61;
+    border-width: 1px;
+}
 
+.foot {
+    border-top: 1rem solid #EC8131;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.foot h3 {
+    color: #EC7A33;
+}
+
+.foot-item {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#textarea-1 {
+    background-color: #FBF1DA61;
+}
+
+#submit-button {
+    background: linear-gradient(90.92deg, #E9B131 9.83%, #EC8131 84.6%);
+}
 
 #lower-head-copy {
     margin-right: 3em;
+}
+
+#logo-bottom-left {
+    margin: -9rem -8rem 0rem 0rem;
+}
+
+#logo-bottom-right {
+    border-left: .2rem solid #EC8131;
+    padding-left: 2rem;
+    margin-left: -4rem;
 }
