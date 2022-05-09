@@ -47,18 +47,21 @@ input {
     justify-content: flex-start;
     align-items: center;
     margin: -5em 0em 0em 0em;
-    background-image: url('img/Artboard\ 1.png');
     background-size: 100%;
     height: 46em;
     background-repeat: no-repeat;
     width: 100%;
 }
 
+
+
 .head-copy {
+    text-align: center;
     color: black;
-    margin: 0em 0em 1em 10em;
+    margin: 1rem 0rem 1rem 8rem;
     background-color: #FFEEE1;
-    padding: .25em .75em .25em .75em;
+    padding: .25rem .75rem .25rem .75rem;
+    font-size: 2em;
 }
 
 .middle-section {
@@ -66,22 +69,21 @@ input {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .middle-image {
-    width: 50%;
-    padding: 5em 2.5em 5em 5em;
+    padding: 5em 2.5em 5em 10em;
 }
 
 .middle-copy {
-    background-color: white;
-    margin: -10em 5em 0em 5em;
-    padding: 0em 2.5em 5em 5em;
+    background-color: red;
+    margin: -5rem 20rem -5rem 10rem;
+    padding: 1rem 1rem 1rem 1rem;
     text-align: justify;
+    text-align: center;
+    /* font-size: 1.5em; */
 }
-
-
 
 .badge-container {
     background-color: #FBF1DA;
@@ -151,11 +153,6 @@ Need the upper to have a gradient the whole time, between them, use the tool and
     text-align:start
 }
 
-.form {
-    border: none;
-    display: flex;
-    flex-direction: column;
-}
 
 .form-inline {
     margin: 1rem 0rem 1rem 0rem;
@@ -169,7 +166,7 @@ Need the upper to have a gradient the whole time, between them, use the tool and
     border-top: 1rem solid #EC8131;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
 }
 
@@ -181,24 +178,79 @@ Need the upper to have a gradient the whole time, between them, use the tool and
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-
 }
+
+/* this is where the Referral form starts */
+
+
+.form-container {
+background-color: #E9B131;
+padding: 10px 10px;
+}
+
+.fieldset-main {
+    background-color: none;
+    border: none;
+}
+
+.client-relation {
+    display: flex;
+    flex-direction: column;
+}
+
+/* this is where the ID section begins */
+
+#index-head {
+    background-image: url('img/Artboard\ 1.png');
+}
+
+#referral-head {
+    background-image: url('img/Artboard\ 1\ copy\ 6.png');
+}
+
+#referral-head {
+    justify-content: flex-end;
+}
+
+#referral-head .head-copy {
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+#referral-form-main {
+    background-color: red;
+}
+
+#referral-form-main h1 {
+    text-align: center;
+}
+
+
 
 #textarea-1 {
     background-color: #FBF1DA61;
 }
 
+
 #submit-button {
     background: linear-gradient(90.92deg, #E9B131 9.83%, #EC8131 84.6%);
 }
+
 
 #lower-head-copy {
     margin-right: 3em;
 }
 
+/* this is ID adjustment of all logos */
+
+/* #logo-top-left {
+    width: 50%;
+} */
+
 #logo-bottom-left {
-    margin: -9rem -8rem 0rem 0rem;
+    margin: -9rem -8rem 0rem -5rem;
 }
+
 
 #logo-bottom-right {
     border-left: .2rem solid #EC8131;
